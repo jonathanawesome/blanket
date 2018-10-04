@@ -13,6 +13,7 @@ function BLANKET_add_scripts()
     'localized',
     array(
       'siteurl' => BLANKET_URL,
+      'ajaxURL' => BLANKET_THEME . '/_/admin/php/custom-ajax-handler.php',
     )
   );
 } //end BLANKET_add_scripts
@@ -21,7 +22,7 @@ function BLANKET_add_scripts()
 //clean up <head>
 function BLANKET_head_cleanup()
 {
-	// Originally from http://wpengineer.com/1438/wordpress-header/
+  // Originally from http://wpengineer.com/1438/wordpress-header/
   remove_action('wp_head', 'feed_links_extra', 3);
   add_action('wp_head', 'ob_start', 1, 0);
   add_action('wp_head', function () {
@@ -44,7 +45,7 @@ function BLANKET_head_cleanup()
   remove_filter('comment_text_rss', 'wp_staticize_emoji');
   remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
   add_filter('use_default_gallery_style', '__return_false');
-
+  
 }
 
 //admin screen stuff
@@ -90,15 +91,15 @@ function BLANKET_custom_editor_styles()
 
 function BLANKET_editor_dash_cleanup()
 {
-	//remove taxonomy meta boxes
-		//remove_meta_box( 'formatsdiv', array('articles', 'blog'), 'normal' );
+  //remove taxonomy meta boxes
+  //remove_meta_box( 'formatsdiv', array('articles', 'blog'), 'normal' );
   global $menu;
 	// check if admin and hide these for admins
   if ((current_user_can('install_themes'))) {
     $restricted = array(
       __('Posts'),
       __('Comments'),
-
+      
     );
   }
 	// hide these for other roles
@@ -127,18 +128,53 @@ function BLANKET_editor_dash_cleanup()
 function BLANKET_admin_css()
 {
   echo '<style type="text/css">
-		  #adminmenu .wp-menu-image img {
-			  width: 20px;
-			  height: 20px;
-			  padding-top: 6px;
-      }
-      .column-lead_asset {
-        width: 6rem;
-      }
-      .column-lead_asset img {
-        width: 100%;
-      }
-		 </style>';
+  #adminmenu .wp-menu-image img {
+    width: 20px;
+    height: 20px;
+    padding-top: 6px;
+  }
+  .column-lead_asset {
+    width: 6rem;
+  }
+  .column-lead_asset img {
+    width: 100%;
+  }
+  </style>';
 }
 
+function BLANKET_search_ajax_handler() {
+  $search = sanitize_text_field( $_POST[ 'term' ] );
+  $args = array('s' => 
+    $search, 
+    'numberposts' => -1,
+    'orderby' => 'date', 
+    'post_type' => array(''));
+  $thePosts = get_posts( $args );
+  if ($thePosts) {
+    foreach ($thePosts as $thePost) {
+      $id = $thePost->ID;
+      ?>
+        <div class="searchResult">
+          SEARCH RESULT
+        </div><!--searchResult-->
+
+  <?php }
+  } else {
+    echo 'No search results!';
+  }
+  die();
+}//BLANKET_search
+
+function BLANKET_fetch_ajax_handler() {
+  $offset = $_POST[ 'offset' ];
+  $newOffset = $offset * 40;
+  $args = array(
+    'numberposts' => 40,
+    'offset' => $newOffset,
+    'orderby' => 'date', 
+    'post_type' => array('')
+  );
+  include(locate_template('_/admin/partials/something.php'));
+  die();
+}//BLANKET_fetch
 ?>

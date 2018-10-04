@@ -24,8 +24,11 @@ function BLANKET_theme_setup()
   add_action('admin_menu', 'BLANKET_editor_dash_cleanup');
   add_action('admin_head', 'BLANKET_admin_css');
 
-  //add_action('BLANKET_BLANKET_search', 'BLANKET_search_ajax_handler');
-	//add_action('BLANKET_nopriv_BLANKET_search', 'BLANKET_search_ajax_handler');
+  add_action('BLANKET_BLANKET_search', 'BLANKET_search_ajax_handler');
+  add_action('BLANKET_nopriv_BLANKET_search', 'BLANKET_search_ajax_handler');
+  
+  add_action('BLANKET_BLANKET_fetch', 'BLANKET_fetch_ajax_handler');
+	add_action('BLANKET_nopriv_BLANKET_fetch', 'BLANKET_fetch_ajax_handler');
 
   add_action('wp_enqueue_scripts', 'BLANKET_add_scripts');
 
