@@ -1,0 +1,51 @@
+/*box-sizing */
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+/* type */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+html, html a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.03);
+}
+
+ul, ol {
+  margin: 0;
+  padding: 1.4rem 0;
+  list-style-type: none;
+
+  li {
+   // margin: 1rem 8rem 1rem 4rem;
+  }
+}
+
+figure {
+  margin: 1rem 2rem 3rem;
+
+  figcaption {
+    padding: 0.5rem 0 1rem;
+    font-size: 1.4rem;
+    font-family: $rR;
+  }
+}//figure
+
+/* images and SVG */
+svg {
+  width: 100%;
+  height: auto;
+}
+
+img, video {
+  width: 100%;
+  vertical-align: top;
+}

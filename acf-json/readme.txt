@@ -1,0 +1,1 @@
+This folder is used by the Advanced Custom Fields plugin for storing JSON-formatted field data.

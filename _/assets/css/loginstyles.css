@@ -1,0 +1,57 @@
+body.login {
+  background-color: red;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login h1 {
+text-align: center;
+display: none;
+}
+
+.login form {
+background-color: transparent;
+border: none!important;
+-moz-box-shadow: none!important;
+-webkit-box-shadow: none!important;
+box-shadow: none!important;
+}
+
+.login #login_error {
+background: rgba(255,255,255,.6);
+-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+
+#login h1 a {
+display: none;
+}
+
+.login label {
+  color: white;
+}
+.wp-core-ui .button-primary {
+  background: none;
+  border: none;
+  box-shadow: 0 1px 0 red;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.login #nav a, .login #backtoblog a {
+text-decoration: none;
+color: white;
+}
+
+.login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
+color: red;
+}
+
+.wp-core-ui .button, .wp-core-ui .button.button-large, .wp-core-ui .button.button-small, a.preview, input#publish, input#save-post {
+background-color: white;
+color: red;
+border-color: red;
+}
