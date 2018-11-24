@@ -26,8 +26,15 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        test: /\.(woff|woff2|eot|ttf)$/,
         loader: 'url-loader?limit=100000'
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        loader: 'file-loader',
+        query: {
+          name: 'img/[name].[ext]'
+        }
       },
       {
         test: /\.s?css$/,

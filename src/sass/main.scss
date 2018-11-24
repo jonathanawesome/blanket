@@ -4,7 +4,9 @@
 @import "fonts";
 
 
-body {
+.body {
   background-color: red;
   font-family: $rR;
+  background-image: url('../../_/img/test.png');
+  background-repeat: no-repeat;
 }
