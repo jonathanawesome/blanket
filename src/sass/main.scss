@@ -1,0 +1,10 @@
+@import "normalize";
+@import "variablesandmixins";
+@import "customreset";
+@import "fonts";
+
+
+body {
+  background-color: red;
+  font-family: $rR;
+}

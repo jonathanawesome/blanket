@@ -1,16 +1,16 @@
 <?php
 
 //constants
+define('BLANKET_VERSION', '2.0.0');
 define('BLANKET_THEME', get_stylesheet_directory_uri());
 define('BLANKET_URL', get_bloginfo('url'));
 define('BLANKET_IMG_DIR', BLANKET_THEME . '/_/assets/img/');
 define('BLANKET_SVG_DIR', BLANKET_THEME . '/_/assets/svg/');
 
 
-// requires & includes
+//actions & filters
 add_action('after_setup_theme', 'BLANKET_theme_setup');
-function BLANKET_theme_setup()
-{
+function BLANKET_theme_setup() {
 
   add_action('init', 'BLANKET_head_cleanup');
   add_action('login_head', 'BLANKET_custom_login_css');
@@ -36,8 +36,13 @@ function BLANKET_theme_setup()
 
 
 // requires & includes
-require get_template_directory() . '/_/admin/php/actionsfilters.php';
-require get_template_directory() . '/_/admin/php/helpers.php';
-require get_template_directory() . '/_/admin/php/postandtax.php';
+require get_template_directory() . '/_/php/scriptsandstyles.php';
+require get_template_directory() . '/_/php/posttypes.php';
+require get_template_directory() . '/_/php/taxonomies.php';
+require get_template_directory() . '/_/php/theme.php';
+require get_template_directory() . '/_/php/helpers.php';
+require get_template_directory() . '/_/php/dashboard.php';
+require get_template_directory() . '/_/php/ajax.php';
+require get_template_directory() . '/_/php/head.php';
 
 ?>
