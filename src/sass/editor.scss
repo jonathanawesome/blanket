@@ -1,7 +1,11 @@
-@import "normalize";
-@import "variablesandmixins";
-@import "customreset";
-@import "fonts";
+@import "01-reset/normalize";
+@import "01-reset/customreset";
+
+@import "02-fontface/fontface";
+
+@import "03-mixins/mixins";
+
+@import "04-variables/variables";
 
 
 body {

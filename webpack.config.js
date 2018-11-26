@@ -12,13 +12,13 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name]-bundle.js'
+    filename: '[name].js'
   },
   resolve: {
     extensions: ['.js', '.scss', '.css', '.json']
   },
   mode: 'development',
-  devtool: 'cheap-eval-source-map',
+  devtool: 'none',
   module: {
     rules: [
       {
@@ -46,7 +46,7 @@ module.exports = {
             options: {
               indent: 'postcss',
               plugins: [
-                require('autoprefixer')({ browsers: 'last 2 versions' }),
+                require('autoprefixer')({ browsers: 'last 2 versions', grid: true }),
                 require('css-mqpacker')({ sort: true })
               ]
             }

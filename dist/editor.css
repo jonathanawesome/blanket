@@ -364,9 +364,6 @@ textarea {
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-/* gutters */
-/* colors */
-/* fonts */
 /*box-sizing */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -395,8 +392,7 @@ figure {
   margin: 1rem 2rem 3rem; }
   figure figcaption {
     padding: 0.5rem 0 1rem;
-    font-size: 1.4rem;
-    font-family: "robotoregular"; }
+    font-size: 1.4rem; }
 
 /* images and SVG */
 svg {
@@ -443,6 +439,9 @@ img, video {
   font-weight: normal;
   font-style: normal; }
 
+/* gutters */
+/* colors */
+/* fonts */
 body {
   background-color: green; }
 

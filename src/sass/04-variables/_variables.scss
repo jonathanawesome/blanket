@@ -18,7 +18,6 @@ $rB:  'robotobold';
 $rBl: 'robotoblack';
 $rCR: 'roboto_condensedregular';
 $rCB: 'roboto_condensedbold';
-//other
 
 //ease
 $easeInSine:      cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -26,24 +25,3 @@ $easeOutSine:     cubic-bezier(0.39, 0.575, 0.565, 1);
 $easeOutQuart:    cubic-bezier(0.165, 0.84, 0.44, 1);
 $easeInQuart:     cubic-bezier(0.895, 0.03, 0.685, 0.22);
 $authenticMotion: cubic-bezier(0.4, 0, 0.2, 1);
-
-
-@mixin breakpoint($class) {
-  @if $class == xxs {
-    @media (max-width: 500px) { @content; }
-  }
-
-  @else if $class == xs {
-    @media (max-width: 768px) { @content; }
-  }
-
-  @else if $class == sm {
-    @media (max-width: 1024px) { @content; }
-  }
- 
-  @else {
-    //@warn "Breakpoint mixin supports: xs, sm, md, lg";
-    @warn "Breakpoint mixin supports: sm";
-  }
-}
-
