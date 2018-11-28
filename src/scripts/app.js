@@ -1,19 +1,18 @@
-import { cookies } from './cookies';
-
+import { something } from './something';
 
 (function () {
 
   document.addEventListener('DOMContentLoaded', () => {
     console.log('Your document is ready!');
-    cookies.showCookieConsent();
+    something.init();
 
   });
 
   document.addEventListener('click', function (e) {
     const target = e.target;
     //console.log(`target: ${target}`);
-    if (target.matches('.cookieConsenter')) {
-      cookies.setCookieConsent();
+    if (target.matches('.something')) {
+      //run something
     }
   }, { passive: true, capture: false });
 

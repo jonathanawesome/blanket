@@ -27,7 +27,10 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf)$/,
-        loader: 'url-loader?limit=100000'
+        loader: 'file-loader?limit=100000',
+        query: {
+          name: 'fonts/[name].[ext]'
+        }
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -46,19 +49,12 @@ module.exports = {
             options: {
               indent: 'postcss',
               plugins: [
-                require('autoprefixer')({ browsers: 'last 2 versions', grid: true }),
-                require('css-mqpacker')({ sort: true })
+                require('autoprefixer')({ browsers: 'last 2 versions', grid: true })
               ]
             }
           },
           {
-            loader: 'sass-loader',
-            options: {
-              includePaths: [
-                'node_modules/sanitize.scss',
-                'node_modules/aurora-utilities/sass'
-              ]
-            }
+            loader: 'sass-loader'
           }
         ]
       }

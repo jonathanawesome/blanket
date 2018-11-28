@@ -3,8 +3,6 @@
 // import styles for compilation
 import './sass/main';
 
-
-
 //polyfills  
 import 'whatwg-fetch';
 import 'promise-polyfill/src/polyfill';
