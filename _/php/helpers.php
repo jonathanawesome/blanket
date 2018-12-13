@@ -28,7 +28,7 @@ function getMetaImage()
   if (get_the_post_thumbnail_url( $id )) {
     echo get_the_post_thumbnail_url( $id, 'card' );
   } else {
-    echo STAGES_IMG_DIR . '/stages-16x9.jpg';
+    echo BLANKET_IMG_DIR . 'test.png';
   }
 }//getMetaImage
 
