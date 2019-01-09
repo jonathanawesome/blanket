@@ -8,14 +8,14 @@ module.exports = {
   entry: {
     main: './src/main.js',
     editor: './src/editor.js',
-    login: './src/login.js'
+    login: './src/login.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name].js',
   },
   resolve: {
-    extensions: ['.js', '.scss', '.css', '.json']
+    extensions: ['.js', '.scss', '.css', '.json'],
   },
   mode: 'development',
   devtool: 'none',
@@ -23,21 +23,21 @@ module.exports = {
     rules: [
       {
         test: /\.js?$/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
       },
       {
         test: /\.(woff|woff2|eot|ttf)$/,
         loader: 'file-loader?limit=100000',
         query: {
-          name: 'fonts/[name].[ext]'
-        }
+          name: 'fonts/[name].[ext]',
+        },
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
         loader: 'file-loader',
         query: {
-          name: 'img/[name].[ext]'
-        }
+          name: 'img/[name].[ext]',
+        },
       },
       {
         test: /\.s?css$/,
@@ -48,22 +48,18 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               indent: 'postcss',
-              plugins: [
-                require('autoprefixer')({ browsers: 'last 2 versions', grid: true })
-              ]
-            }
+              plugins: [require('autoprefixer')({ browsers: 'last 2 versions', grid: true })],
+            },
           },
           {
-            loader: 'sass-loader'
-          }
-        ]
-      }
-    ]
+            loader: 'sass-loader',
+          },
+        ],
+      },
+    ],
   },
-  plugins: [
-    new MiniCssExtractPlugin({ filename: '[name].css' }),
-  ],
+  plugins: [new MiniCssExtractPlugin({ filename: '[name].css' })],
   optimization: {
-    minimizer: [new UglifyJSPlugin(), new OptimizeCssAssetsPlugin()]
-  }
+    minimizer: [new UglifyJSPlugin(), new OptimizeCssAssetsPlugin()],
+  },
 };
