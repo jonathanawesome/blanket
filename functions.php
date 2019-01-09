@@ -1,7 +1,7 @@
 <?php
 
 //constants
-define('BLANKET_VERSION', '2.0.0');
+define('BLANKET_VERSION', '2.0.1');
 define('BLANKET_THEME', get_stylesheet_directory_uri());
 define('BLANKET_URL', get_bloginfo('url'));
 define('BLANKET_IMG_DIR', BLANKET_THEME . '/_/img/');
