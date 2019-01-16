@@ -6,4 +6,5 @@ _/*
 dist/*
 
 # ignore specific files
+src/sass/01-reset/_customreset.scss
 src/sass/01-reset/_normalize.scss
