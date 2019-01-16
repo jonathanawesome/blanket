@@ -2,4 +2,6 @@
 .*
 
 # ignore specific directories
+_/*
+dist/*
 src/scripts/vendor/*
