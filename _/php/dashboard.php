@@ -1,15 +1,15 @@
 <?php 
-//admin screen stuff
+
 //login styles
-function BLANKET_custom_login_css() {
+function blanket_custom_login_css() {
   echo '<link rel="stylesheet" type="text/css" href="' . BLANKET_THEME . '/dist/login.css" />';
 }
 
-function BLANKET_custom_loginlogo_url($url) {
+function blanket_custom_loginlogo_url($url) {
   return get_bloginfo('url');
 }
 
-function BLANKET_remove_ataglance() {
+function blanket_remove_ataglance() {
   remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
   remove_meta_box('dashboard_activity', 'dashboard', 'normal');
   remove_meta_box('dashboard_primary', 'dashboard', 'side');
@@ -18,26 +18,24 @@ function BLANKET_remove_ataglance() {
 }
 
 //allow svg uploads
-function BLANKET_add_mime_types($mimes)
+function blanket_add_mime_types($mimes)
 {
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;
 }
 
 //remove height and width from WYSIWYG images
-function BLANKET_remove_width_attribute($html) {
+function blanket_remove_width_attribute($html) {
   $html = preg_replace('/(width|height)="\d*"\s/', "", $html);
   return $html;
 }
 
-//tinymce changes
-function BLANKET_custom_editor_styles() {
-  add_editor_style(BLANKET_THEME . '/dist/editor.css');
-}
-
-function BLANKET_editor_dash_cleanup() {
+function blanket_remove_taxonomy_meta_boxes() {
   //remove taxonomy meta boxes
   //remove_meta_box( 'formatsdiv', array('articles', 'blog'), 'normal' );
+}
+
+function blanket_dash_cleanup() {
   global $menu;
 	// check if admin and hide these for admins
   if ((current_user_can('install_themes'))) {
@@ -70,7 +68,7 @@ function BLANKET_editor_dash_cleanup() {
 }
 
 //admin css
-function BLANKET_admin_css()
+function blanket_admin_css()
 {
   echo '<style type="text/css">
   #adminmenu .wp-menu-image img {
@@ -79,7 +77,7 @@ function BLANKET_admin_css()
     padding-top: 6px;
   }
   .column-lead_asset {
-    width: 6rem;
+    width: 60px;
   }
   .column-lead_asset img {
     width: 100%;

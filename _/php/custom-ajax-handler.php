@@ -23,15 +23,15 @@ $action = esc_attr(trim($_REQUEST['action']));
 
 // Declare all actions that you will use this ajax handler for, as an added security measure.
 $allowed_actions = array(
-	//'BLANKET_search',
-	//'BLANKET_fetch',
+	//'blanket_search',
+	//'blanket_fetch',
 );
 
 if(in_array($action, $allowed_actions)) {
 	if(is_user_logged_in())
-		do_action('BLANKET_'.$action);
+		do_action('blanket_'.$action);
 	else
-		do_action('BLANKET_nopriv_'.$action);
+		do_action('blanket_nopriv_'.$action);
 } else {
 	die('-1');
 }

@@ -1,6 +1,6 @@
 <?php 
 
-function BLANKET_search_ajax_handler() {
+function blanket_search_ajax_handler() {
   $search = sanitize_text_field( $_POST[ 'term' ] );
   $args = array('s' => 
     $search, 
@@ -21,9 +21,9 @@ function BLANKET_search_ajax_handler() {
     echo 'No search results!';
   }
   die();
-}//BLANKET_search
+}//blanket_search
 
-function BLANKET_fetch_ajax_handler() {
+function blanket_fetch_ajax_handler() {
   $offset = $_POST[ 'offset' ];
   $newOffset = $offset * 40;
   $args = array(
@@ -34,6 +34,6 @@ function BLANKET_fetch_ajax_handler() {
   );
   include(locate_template('_/admin/partials/something.php'));
   die();
-}//BLANKET_fetch
+}//blanket_fetch
 
 ?>
