@@ -1,9 +1,6 @@
 <?php
 
-//create post types
-add_action('init', 'create_post_types');
-
-function create_post_types() {
+function blanket_create_post_types() {
 
   // //create news post type
   // $labels = array(

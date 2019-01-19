@@ -1,4 +1,5 @@
 <?php 
+
 //admin stuff
 // add_theme_support( 'post-thumbnails' ); 
 // set_post_thumbnail_size( 800, 450, true );
@@ -13,4 +14,5 @@
 //     'position'   => 20
 //   ));
 // }
+
 ?>
