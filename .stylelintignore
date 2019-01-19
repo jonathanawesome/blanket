@@ -1,0 +1,10 @@
+# ignore files/directories that start with a period (.)
+.*
+
+# ignore specific directories
+_/*
+dist/*
+
+# ignore specific files
+src/sass/01-reset/_customreset.scss
+src/sass/01-reset/_normalize.scss

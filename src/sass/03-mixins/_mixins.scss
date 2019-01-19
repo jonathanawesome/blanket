@@ -10,7 +10,7 @@
   @else if $class == sm {
     @media (max-width: 1024px) { @content; }
   }
- 
+
   @else {
     //@warn "Breakpoint mixin supports: xs, sm, md, lg";
     @warn "Breakpoint mixin supports: sm";
