@@ -32,7 +32,7 @@ function blanket_create_post_types() {
   //   'has_archive' => true,
   //   'hierarchical' => false,
   //   'menu_position' => 5,
-  //   'menu_icon' => get_template_directory_uri() . '/_/assets/img/menuicon.png',
+  //   'menu_icon' => get_template_directory_uri() . '/src/img/menuicon.png',
   //   'supports' => array('title', 'thumbnail')
   // );
 

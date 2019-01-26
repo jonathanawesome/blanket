@@ -2,7 +2,7 @@
 
 //login styles
 function blanket_custom_login_css() {
-  echo '<link rel="stylesheet" type="text/css" href="' . BLANKET_THEME . '/dist/login.css" />';
+  echo '<link rel="stylesheet" type="text/css" href="' . get_stylesheet_directory_uri() . '/dist/login.css" />';
 }
 
 function blanket_custom_loginlogo_url($url) {

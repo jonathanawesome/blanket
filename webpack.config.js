@@ -4,14 +4,14 @@ const path = require('path'),
   OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
-  context: __dirname,
+  context: __dirname, // eslint-disable-line no-undef
   entry: {
     main: './src/main.js',
     editor: './src/editor.js',
     login: './src/login.js',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'), // eslint-disable-line no-undef
     filename: '[name].js',
   },
   resolve: {
