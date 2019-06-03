@@ -5,7 +5,8 @@
 @import "04-variables/variables";
 
 body {
-  background-image: url('../img/test.png');
-  background-repeat: no-repeat;
-  background-color: orange;
+  background-color: $offBlack;
+  color: $offWhite;
+  font-family: $rR;
 }
+

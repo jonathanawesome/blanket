@@ -1,24 +1,38 @@
-/* gutters */
-$gtrS:  2rem;
-$gtrM:  5rem;
-$gtrL:  8rem;
-$gtrXL: 10rem;
-
-/* colors */
+// colors 
 $white:      rgb(255, 255, 255);
-$offWhite:   rgb(245, 245, 245);
+$offWhite:   rgb(254, 254, 254);
 $black:      rgb(0, 0, 0);
-$offBlack:   rgb(37, 37, 37);
+$offBlack:   rgb(28, 28, 28);
 
-/* fonts */
-$rR:  'robotoregular';
-$rM:  'robotomedium';
-$rB:  'robotobold';
-$rBl: 'robotoblack';
-$rCR: 'roboto_condensedregular';
-$rCB: 'roboto_condensedbold';
+// fonts
+$rT:   'roboto_thin';
+$rTi:  'roboto_thin_italic';
 
-//ease
+$rL:   'roboto_light';
+$rLi:  'roboto_light_italic';
+
+$rR:   'roboto_regular';
+$rRi:  'roboto_italic';
+
+$rM:   'roboto_medium';
+$rMi:  'roboto_medium_italic';
+
+$rB:   'roboto_bold';
+$rBi:  'roboto_bold_italic';
+
+$rBl:  'roboto_black';
+$rBli: 'roboto_black_italic';
+
+$rcL:  'roboto_condensed_light';
+$rcLi: 'roboto_condensed_light_italic';
+
+$rcR:  'roboto_condensed_regular';
+$rcRi: 'roboto_condensed_italic';
+
+$rcB:  'roboto_condensed_bold';
+$rcBi:  'roboto_condensed_bold_italic';
+
+// ease
 $easeInSine:      cubic-bezier(0.47, 0, 0.745, 0.715);
 $easeOutSine:     cubic-bezier(0.39, 0.575, 0.565, 1);
 $easeOutQuart:    cubic-bezier(0.165, 0.84, 0.44, 1);
