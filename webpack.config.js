@@ -1,9 +1,10 @@
-const path = require('path'),
-  MiniCssExtractPlugin = require('mini-css-extract-plugin'),
-  TerserPlugin = require('terser-webpack-plugin'),
-  OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
-  WebpackAssetsManifest = require('webpack-assets-manifest'),
-  { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const WebpackAssetsManifest = require('webpack-assets-manifest');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   context: __dirname, // eslint-disable-line no-undef
@@ -71,6 +72,7 @@ module.exports = {
       filename: '[name].[contenthash].css',
     }),
     new WebpackAssetsManifest(),
+    new BrowserSyncPlugin({ files: '**/*.php', proxy: 'http://blanket.test' }),
   ],
   optimization: {
     minimizer: [
