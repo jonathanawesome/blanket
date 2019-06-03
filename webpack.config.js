@@ -50,7 +50,12 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               indent: 'postcss',
-              plugins: [require('autoprefixer')({ browsers: 'last 2 versions', grid: true })],
+              plugins: [
+                require('autoprefixer')({
+                  browsers: 'last 2 versions',
+                  grid: true,
+                }),
+              ],
             },
           },
           {

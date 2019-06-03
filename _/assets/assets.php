@@ -2,6 +2,7 @@
 
 // use assets with hashed names
 // credit: https://danielshaw.co.nz/wordpress-cache-busting-json-hash-map/
+// thanks grant!: https://github.com/gblakeman/blanket/commit/aad6e4328d86659dbc51ce3c7f09cfa3a581a821
 function getHashedAsset( $filename ) {
   $manifest_path = get_template_directory() . '/dist/manifest.json';
   if (!empty($manifest_path) && file_exists($manifest_path)) {
