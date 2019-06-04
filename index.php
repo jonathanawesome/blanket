@@ -1,5 +1,5 @@
 <?php get_header() ?>
 
-blanket index
+  blanket index
 
 <?php get_footer(); ?>

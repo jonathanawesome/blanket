@@ -1,7 +1,7 @@
 <?php
 
 function blanket_create_post_types() {
-
+  
   //create custom Blankets post type
   $labels = array(
     'name' => 'Blankets',
@@ -19,18 +19,20 @@ function blanket_create_post_types() {
     'menu_name' => 'Blankets'
   );
 
+  $encoded_svg = base64_encode( file_get_contents(BLANKET_SVG_DIR . 'blanket_menu_icon.svg' ));
+
   $args = array(
     'labels' => $labels,
     'public' => true,
+    'show_in_rest' => true,
     'rewrite' => array('slug' => 'news'),
     'has_archive' => true,
     'menu_position' => 5,
-    'menu_icon' => 'data:image/svg+xml;base64,' . base64_encode( file_get_contents(BLANKET_SVG_DIR . 'blanket_menu_icon.svg' )), 
-    'supports' => array('title', 'thumbnail')
+    'menu_icon' => 'data:image/svg+xml;base64,' . $encoded_svg, 
+    'supports' => array('title', 'thumbnail', 'editor')
   );
 
   register_post_type('blankets', $args);
-
 
 } // end create post types
 
