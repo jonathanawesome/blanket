@@ -22,11 +22,11 @@ function blanket_create_post_types() {
   $args = array(
     'labels' => $labels,
     'public' => true,
-    'rewrite' => array('slug' => 'news'),
+    'show_in_rest' => true,    
     'has_archive' => true,
     'menu_position' => 5,
     'menu_icon' => 'data:image/svg+xml;base64,' . base64_encode( file_get_contents(BLANKET_SVG_DIR . 'blanket_menu_icon.svg' )), 
-    'supports' => array('title', 'thumbnail')
+    'supports' => array('title', 'thumbnail', 'editor', 'page-attributes')
   );
 
   register_post_type('blankets', $args);

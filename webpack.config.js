@@ -34,13 +34,13 @@ module.exports = {
           name: 'fonts/[name].[contenthash].[ext]',
         },
       },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        loader: 'file-loader',
-        query: {
-          name: 'img/[name].[contenthash].[ext]',
-        },
-      },
+      // {
+      //   test: /\.(png|svg|jpg|gif)$/,
+      //   loader: 'file-loader',
+      //   query: {
+      //     name: 'img/[name].[contenthash].[ext]',
+      //   },
+      // },
       {
         test: /\.s?css$/,
         use: [
