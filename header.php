@@ -14,6 +14,14 @@
 
   <header>
     HEADER
+
+    <button type="button" class="something">click</button>
+
+    <form id="search__form" role="search">
+      <input type="search" id="search__form__term" placeholder="<?php _e( 'Search', 'blanketisyourfriend' );?>">
+    </form>
+
+
   </header>
 
  	<main class="content">

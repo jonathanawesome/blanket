@@ -3,16 +3,17 @@ import { something } from './something';
 (function() {
   document.addEventListener('DOMContentLoaded', () => {
     console.log('Your document is ready!');
-    something.init();
+    something.doInit();
   });
 
   document.addEventListener(
     'click',
-    function(e) {
+    e => {
       const target = e.target;
       //console.log(`target: ${target}`);
+
       if (target.matches('.something')) {
-        //run something
+        something.handleClick(e);
       }
     },
     {
@@ -21,9 +22,13 @@ import { something } from './something';
     }
   );
 
-  // document.addEventListener('submit', function (e) {
-  //   e.preventDefault();
-  // }, false);
+  const searchSomething = document.querySelector('#search__form');
+  if (searchSomething) {
+    searchSomething.addEventListener('submit', e => {
+      e.preventDefault();
+      something.handleSearch(e);
+    });
+  }
 
   // window.addEventListener('resize', function () {
   // }, false);

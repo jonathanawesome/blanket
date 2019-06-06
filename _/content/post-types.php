@@ -19,7 +19,7 @@ function blanket_create_post_types() {
     'menu_name' => 'Blankets'
   );
 
-  $encoded_svg = base64_encode( file_get_contents(BLANKET_SVG_DIR . 'blanket_menu_icon.svg' ));
+  $encoded_svg = base64_encode( file_get_contents(BLANKET_SVG_DIR . 'blanket_logo.svg' ));
 
   $args = array(
     'labels' => $labels,

@@ -11,13 +11,14 @@ function blanket_search_ajax_handler() {
     'post_type' => array('')
   );
   
-  $thePosts = get_posts( $args );
+  $searchResults = get_posts( $args );
   
-  if ($thePosts) {
-    foreach ($thePosts as $thePost) {
-      $id = $thePost->ID; ?>
+  if ($searchResults) {
+    foreach ($searchResults as $searchResult) { ?>
 
         <div>SEARCH RESULT</div>
+        
+        <?php // include(locate_template('templates/partials/search_result.php')); ?>
 
   <?php }
   } else {

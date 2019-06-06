@@ -5,5 +5,18 @@
 @import "04-variables/variables";
 
 body {
-  background-color: red;
-}
+  background-color: $offBlack;
+  font-family: $rR;
+
+  #login {
+    h1 {
+      a {
+        background-image: url('../../src/svg/blanket_logo.svg');  
+      }
+    }//h1
+
+    form {
+      color: $offBlack;
+    }//form
+  }//login
+}//body
