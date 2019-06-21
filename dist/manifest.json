@@ -1,9 +1,10 @@
 {
-  "editor.css": "editor.52991f487f41ae41595e.css",
-  "editor.js": "editor.8a97eb8df6c303668552.js",
+  "editor.css": "editor.1dcd1a06d3d9d2014038.css",
+  "editor.js": "editor.6c4365b3951721b48959.js",
   "fonts/Roboto-Regular-webfont.woff": "fonts/Roboto-Regular-webfont.b3be96cbbfd0ff1f3ba3c7c2f58c1441.woff",
-  "login.css": "login.b09696b64c628dc9ba06.css",
-  "login.js": "login.6ad7b5548f60e1bbd185.js",
-  "main.css": "main.9ae2916457c0786c25d4.css",
-  "main.js": "main.d8b6e0783b4238978431.js"
+  "img/blanket_logo.svg": "img/blanket_logo.112488b509ab1d22e13704260d37ceeb.svg",
+  "login.css": "login.0031e346f41193547d31.css",
+  "login.js": "login.26420ec0c59050884496.js",
+  "main.css": "main.f258d0c3485fdaae93e2.css",
+  "main.js": "main.ca4f7aa108e26cd97ec8.js"
 }

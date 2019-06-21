@@ -418,6 +418,9 @@ img, video {
 
 body {
   background-color: #1c1c1c;
-  color: #fefefe;
   font-family: "roboto_regular"; }
+  body #login h1 a {
+    background-image: url(img/blanket_logo.112488b509ab1d22e13704260d37ceeb.svg); }
+  body #login form {
+    color: #1c1c1c; }
 

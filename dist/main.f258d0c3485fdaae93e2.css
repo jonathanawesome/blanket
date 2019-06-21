@@ -417,5 +417,7 @@ img, video {
   font-style: normal; }
 
 body {
-  background-color: red; }
+  background-color: #1c1c1c;
+  font-family: "roboto_regular";
+  color: #d15353; }
 

@@ -77,4 +77,16 @@ require get_template_directory() . '/_/login/login.php';
 // add_image_size('small', 384, 9999);
 // add_image_size('card', 800, 450, true);
 
+
+function php_console_log( $message ) {
+
+  $message = htmlspecialchars( stripslashes( $message ) );
+  //Replacing Quotes, so that it does not mess up the script
+  $message = str_replace( '"', "-", $message );
+  $message = str_replace( "'", "-", $message );
+
+  return "<script>console.log('{$message}')</script>";
+}
+
+
 ?>

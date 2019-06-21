@@ -35,7 +35,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(svg|png|jpg|gif)$/,
         loader: 'file-loader',
         query: {
           name: 'img/[name].[contenthash].[ext]',
@@ -66,7 +66,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanStaleWebpackAssets: false,
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),

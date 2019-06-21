@@ -3,10 +3,10 @@
 // import styles for compilation
 import './sass/main';
 
-// polyfills
-import 'whatwg-fetch';
-import 'promise-polyfill/src/polyfill';
+// browser polyfills
 import './scripts/polyfills';
+// import 'whatwg-fetch';
+// import 'promise-polyfill/src/polyfill';
 
 //vendors
 //import '../vendor/noframework.waypoints.js';
