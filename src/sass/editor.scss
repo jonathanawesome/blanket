@@ -1,8 +1,8 @@
-@import "01-reset/normalize";
-@import "01-reset/customreset";
-@import "02-fontface/fontface";
-@import "03-mixins/mixins";
-@import "04-variables/variables";
+@import "reset/normalize";
+@import "reset/customreset";
+@import "fontface/fontface";
+@import "mixins/mixins";
+@import "variables/variables";
 
 body {
   background-color: green;
