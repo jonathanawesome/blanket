@@ -18,8 +18,7 @@ function blanket_theme_setup() {
   add_filter('mce_buttons_2', 'blanket_remove_tinymce_buttons_from_kitchen_sink');
 
   // editor/gutenberg.php
-  // add_action( 'enqueue_block_editor_assets', 'blanket_block_editor_styles' );
-  // add_filter( 'allowed_block_types', 'blanket_allowed_block_types' );
+  add_filter( 'allowed_block_types', 'blanket_allowed_block_types' );
     
   // login
   add_action('login_head', 'blanket_custom_login_css');
@@ -28,11 +27,8 @@ function blanket_theme_setup() {
   // dashboard
   add_action('wp_dashboard_setup', 'blanket_remove_ataglance');
   add_filter('upload_mimes', 'blanket_add_mime_types');
-  // add_filter('post_thumbnail_html', 'blanket_remove_height_and_width_attribute', 10);
-  // add_filter('image_send_to_editor', 'blanket_remove_height_and_width_attribute', 10);
   // add_filter('admin_menu', 'blanket_remove_taxonomy_meta_boxes');
   add_action('admin_menu', 'blanket_remove_menu_items');
-  // add_action('admin_head', 'blanket_admin_css');
     
   // head/cleanup.php
   add_action('init', 'blanket_head_cleanup');

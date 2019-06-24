@@ -15,7 +15,6 @@ function blanket_create_post_types() {
     'search_items' => 'Search Blankets',
     'not_found' => 'No Blankets found',
     'not_found_in_trash' => 'No Blankets found in Trash',
-    'parent_item_colon' => '',
     'menu_name' => 'Blankets'
   );
 
@@ -25,11 +24,11 @@ function blanket_create_post_types() {
     'labels' => $labels,
     'public' => true,
     'show_in_rest' => true,
-    'rewrite' => array('slug' => 'news'),
+    // 'rewrite' => array('slug' => 'blanket'),
     'has_archive' => true,
     'menu_position' => 5,
     'menu_icon' => 'data:image/svg+xml;base64,' . $encoded_svg, 
-    'supports' => array('title', 'thumbnail', 'editor')
+    'supports' => array('title', 'thumbnail', 'editor', 'page-attributes')
   );
 
   register_post_type('blankets', $args);

@@ -22,7 +22,6 @@ function getHashedAssetWithPath( $filename ) {
   $base_path = get_template_directory_uri();
   $hashed_filename = getHashedAsset($filename);
   $name_with_path = $base_path . $hashed_filename;
-  // echo php_console_log( "PHP info: " . $name_with_path );
   return $name_with_path;
 }
 
@@ -35,16 +34,24 @@ function blanket_add_scripts() {
   //remove core-provided jQuery
   wp_deregister_script('jquery');
   
-  wp_enqueue_script('main-js', get_stylesheet_directory_uri() . getHashedAsset('main.js'), array(), null, true);
-  wp_enqueue_style( 'styles', get_stylesheet_directory_uri() . getHashedAsset('main.css'), array(), null );
+  wp_enqueue_script( 'main-js', get_template_directory_uri() . getHashedAsset('main.js'), array(), null, true );
+  wp_enqueue_style( 'main-css', get_template_directory_uri() . getHashedAsset('main.css'), array(), null );
 
   wp_localize_script(
     'main-js',
     'localized',
     array(
-      'ajaxURL' => get_stylesheet_directory_uri() . '/_/ajax/custom-ajax-handler.php',
+      'ajaxURL' => get_template_directory_uri() . '/_/ajax/custom-ajax-handler.php',
     )
   );
 } //end blanket_add_scripts
+
+// admin scripts & styles
+function blanket_add_admin_scripts() {
+
+  wp_enqueue_script( 'admin-js', get_template_directory_uri() . getHashedAsset('editor.js'), array(), null, true );
+  wp_enqueue_style( 'admin-css', get_template_directory_uri() . getHashedAsset('editor.css'), array(), null );
+
+}
 
 ?>

@@ -1,9 +1,5 @@
 <?php 
 
-function blanket_custom_editor_styles() {
-  add_editor_style( get_stylesheet_directory_uri() . getHashedAsset('editor.js'));  
-}
-
 function blanket_remove_tinymce_buttons_from_editor( $buttons ) {
   $remove_buttons = array(
       // 'bold',
