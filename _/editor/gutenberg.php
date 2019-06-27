@@ -22,5 +22,3 @@ add_theme_support( 'disable-custom-colors' );
 
 // remove color palette
 add_theme_support( 'editor-color-palette' );
-
-?>

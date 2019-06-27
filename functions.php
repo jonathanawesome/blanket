@@ -13,7 +13,6 @@ function blanket_theme_setup() {
   // add_action('blanket_nopriv_blanket_search', 'blanket_search_ajax_handler');
 
   // editor/classic.php
-  add_action('admin_init', 'blanket_custom_editor_styles');
   add_filter('mce_buttons', 'blanket_remove_tinymce_buttons_from_editor');
   add_filter('mce_buttons_2', 'blanket_remove_tinymce_buttons_from_kitchen_sink');
 

@@ -29,5 +29,3 @@ function blanket_search_ajax_handler() {
 
   die();
 }// blanket_search
-
-?>

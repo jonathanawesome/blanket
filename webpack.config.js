@@ -9,7 +9,7 @@ module.exports = {
   context: __dirname, // eslint-disable-line no-undef
   entry: {
     main: './src/main.js',
-    editor: './src/editor.js',
+    admin: './src/admin.js',
     login: './src/login.js',
   },
   output: {
@@ -21,6 +21,9 @@ module.exports = {
   },
   mode: 'development',
   devtool: 'none',
+  node: {
+    fs: 'empty',
+  },
   module: {
     rules: [
       {
@@ -28,18 +31,37 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
-        test: /\.(woff|woff2|eot|ttf)$/,
-        loader: 'file-loader',
-        query: {
-          name: 'fonts/[name].[contenthash].[ext]',
-        },
+        test: /\.(woff)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              name: 'fonts/[name].[contenthash].[ext]',
+            },
+          },
+        ],
       },
       {
-        test: /\.(svg|png|jpg|gif)$/,
-        loader: 'file-loader',
-        query: {
-          name: 'img/[name].[contenthash].[ext]',
-        },
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            query: {
+              name: 'img/[name].[contenthash].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            query: {
+              name: 'svg/[name].[contenthash].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.s?css$/,
@@ -50,12 +72,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               indent: 'postcss',
-              plugins: [
-                require('autoprefixer')({
-                  browsers: 'last 2 versions',
-                  grid: true,
-                }),
-              ],
+              plugins: [require('autoprefixer')],
             },
           },
           {
@@ -67,7 +84,8 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin({
-      cleanStaleWebpackAssets: false,
+      // cleanStaleWebpackAssets: true,
+      // cleanAfterEveryBuildPatterns: ['!*.+(woff|woff2|eot|ttf|otf|TTF|OTF)'],
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',

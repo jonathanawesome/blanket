@@ -2,8 +2,7 @@
 
 function blanket_remove_tinymce_buttons_from_editor( $buttons ) {
   $remove_buttons = array(
-      // 'bold',
-      // 'italic',
+      // 'bold', 'italic',
       // 'strikethrough',
       // 'bullist',
       // 'numlist',

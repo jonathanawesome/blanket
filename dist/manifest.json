@@ -1,10 +1,9 @@
 {
-  "editor.css": "editor.ce578d4a8ef38ac24bc7.css",
-  "editor.js": "editor.4c20529d49c37120de63.js",
-  "fonts/Roboto-Regular-webfont.woff": "fonts/Roboto-Regular-webfont.b3be96cbbfd0ff1f3ba3c7c2f58c1441.woff",
-  "img/blanket_logo.svg": "img/blanket_logo.112488b509ab1d22e13704260d37ceeb.svg",
-  "login.css": "login.1b00e49ca34e272781d6.css",
-  "login.js": "login.e9d9d6ab8caf29080f17.js",
-  "main.css": "main.66fb57bc93dee577695a.css",
-  "main.js": "main.b155c64c84f750f31056.js"
+  "admin.css": "admin.229743f8bf93c5965bbb.css",
+  "admin.js": "admin.6ef04598b29cfce4ccdb.js",
+  "login.css": "login.cea4b5fd75a5141041ce.css",
+  "login.js": "login.1ebccd24953fdd7dd8cc.js",
+  "main.css": "main.dc54120bad0fd17b9811.css",
+  "main.js": "main.18b4035f7763732a34b6.js",
+  "svg/blanket_logo.svg": "svg/blanket_logo.112488b509ab1d22e13704260d37ceeb.svg"
 }
