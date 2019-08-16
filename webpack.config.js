@@ -9,7 +9,7 @@ module.exports = {
   context: __dirname, // eslint-disable-line no-undef
   entry: {
     main: './src/main.js',
-    admin: './src/admin.js',
+    blocks: './src/blocks.js',
     login: './src/login.js',
   },
   output: {

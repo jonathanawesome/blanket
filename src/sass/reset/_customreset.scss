@@ -40,24 +40,13 @@ ul, ol {
 }
 
 p {
-  font-size: 1.5rem;
+  font-family: $rR;
 }
 
-figure {
-  margin: 2rem;
-
-  figcaption {
-    padding: 0 1rem;
-  }
-}//figure
-
-/* images and SVG */
-svg {
-  width: 100%;
-  height: auto;
+strong {
+  font-family: $rB;
 }
 
-img, video {
-  width: 100%;
-  vertical-align: top;
-}
+em {
+  font-family: $rRi;
+}  

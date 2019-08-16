@@ -81,31 +81,52 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/admin.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/blocks.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/admin.js":
-/*!**********************!*\
-  !*** ./src/admin.js ***!
-  \**********************/
+/***/ "./_/blocks/dumbo/dumbo.js":
+/*!*********************************!*\
+  !*** ./_/blocks/dumbo/dumbo.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+console.log('acf', window.acf);
+
+if (window.acf) {
+  window.acf.addAction('render_block_preview/type=dumbo', function () {
+    console.log('doing: render_block_preview/type=dumbo'); // do stuff here when the block preview renders
+  });
+}
+
+/***/ }),
+
+/***/ "./src/blocks.js":
+/*!***********************!*\
+  !*** ./src/blocks.js ***!
+  \***********************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _sass_admin__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/admin */ "./src/sass/admin.scss");
-/* harmony import */ var _sass_admin__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_admin__WEBPACK_IMPORTED_MODULE_0__);
-/* blanket editor/admin styles  */
+/* harmony import */ var _sass_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/blocks */ "./src/sass/blocks.scss");
+/* harmony import */ var _sass_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _blocks_dumbo_dumbo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../_/blocks/dumbo/dumbo */ "./_/blocks/dumbo/dumbo.js");
+/* harmony import */ var _blocks_dumbo_dumbo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_blocks_dumbo_dumbo__WEBPACK_IMPORTED_MODULE_1__);
+// blocks styles
+ // block scripts
+
 
 
 /***/ }),
 
-/***/ "./src/sass/admin.scss":
-/*!*****************************!*\
-  !*** ./src/sass/admin.scss ***!
-  \*****************************/
+/***/ "./src/sass/blocks.scss":
+/*!******************************!*\
+  !*** ./src/sass/blocks.scss ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

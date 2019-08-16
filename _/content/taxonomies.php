@@ -35,6 +35,3 @@ function blanket_create_taxonomies() {
   // register_taxonomy('news-categories', array('news'), $args);
 
 } // end create taxonomies
-
-
-?>

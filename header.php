@@ -2,9 +2,11 @@
 <html <?php language_attributes(); ?>>
 <head>
 
-<?php blanket_get_meta(); ?>
+<?php blanket_meta(); ?>
+
+<?php blanket_favicon(); ?>
 	
-<title><?php blanket_get_title(); ?></title>
+<title><?php blanket_title(); ?></title>
 	
 <?php wp_head(); ?>
 

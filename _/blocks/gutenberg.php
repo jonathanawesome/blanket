@@ -6,7 +6,8 @@ function blanket_allowed_block_types( $allowed_blocks ) {
 		'core/paragraph',
 		'core/heading',
     'core/list',
-    'core/spacer',        
+    'core/spacer',   
+    'acf/dumbo'     
 	);
 }
 
@@ -22,3 +23,13 @@ add_theme_support( 'disable-custom-colors' );
 
 // remove color palette
 add_theme_support( 'editor-color-palette' );
+
+// gutenberg scripts
+function blanket_blocks_scripts() {
+  wp_enqueue_script( 'blocks-js', get_template_directory_uri() . getHashedAsset('blocks.js'), array(), null, true );
+}
+
+// gutenberg styles
+function blanket_blocks_styles() {
+  wp_enqueue_style( 'blocks-css', get_template_directory_uri() . getHashedAsset('blocks.css'), array(), null );
+}

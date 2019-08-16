@@ -9,5 +9,3 @@ function blanket_custom_login_css() {
 function blanket_custom_loginlogo_url($url) {
   return get_bloginfo('url');
 }
-
-?>

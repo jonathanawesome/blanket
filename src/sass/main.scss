@@ -1,20 +1,19 @@
 // import order is important
 @import "reset/normalize";
-@import "reset/customreset";
 @import "fontface/fontface";
+@import "variables/variables";
+@import "reset/customreset";
 @import "at-rules/mixins";
 @import "at-rules/functions";
-@import "variables/variables";
 
 body {
   background-color: $offBlack;
-  // background-image: url('../../screenshot.png');  
   font-family: $rR;
   color: $rust;
 }
 
 .svg {
-  width: 10px;
-  height: 10px;
-  margin: 10px;
+  width: block(10);
+  height: block(10);
+  margin: block(2);
 }

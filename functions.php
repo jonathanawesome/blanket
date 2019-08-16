@@ -12,19 +12,17 @@ function blanket_theme_setup() {
   // add_action('blanket_blanket_search', 'blanket_search_ajax_handler');
   // add_action('blanket_nopriv_blanket_search', 'blanket_search_ajax_handler');
 
-  // editor/classic.php
-  add_filter('mce_buttons', 'blanket_remove_tinymce_buttons_from_editor');
-  add_filter('mce_buttons_2', 'blanket_remove_tinymce_buttons_from_kitchen_sink');
-
   // editor/gutenberg.php
-  add_filter( 'allowed_block_types', 'blanket_allowed_block_types' );
-    
+  add_filter('allowed_block_types', 'blanket_allowed_block_types');
+  add_action('admin_enqueue_scripts', 'blanket_blocks_scripts');
+  add_action('enqueue_block_editor_assets', 'blanket_blocks_styles');  
+
   // login
   add_action('login_head', 'blanket_custom_login_css');
   add_filter('login_headerurl', 'blanket_custom_loginlogo_url');
   
   // dashboard
-  add_action('wp_dashboard_setup', 'blanket_remove_ataglance');
+  add_action('wp_dashboard_setup', 'blanket_remove_dashboard_meta_boxes');
   add_filter('upload_mimes', 'blanket_add_mime_types');
   // add_filter('admin_menu', 'blanket_remove_taxonomy_meta_boxes');
   add_action('admin_menu', 'blanket_remove_menu_items');
@@ -32,7 +30,7 @@ function blanket_theme_setup() {
   // head/cleanup.php
   add_action('init', 'blanket_head_cleanup');
 
-  // assets
+  // front end assets
   add_action('wp_enqueue_scripts', 'blanket_add_scripts');
 
   // content...tax first...order is important!
@@ -44,10 +42,6 @@ function blanket_theme_setup() {
 
 // script, styles, assets
 require get_template_directory() . '/_/assets/assets.php';
-
-// editor
-require get_template_directory() . '/_/editor/classic.php';
-require get_template_directory() . '/_/editor/gutenberg.php';
 
 // dashboard
 require get_template_directory() . '/_/dashboard/dashboard.php';
@@ -66,22 +60,6 @@ require get_template_directory() . '/_/head/meta-helpers.php';
 // login  
 require get_template_directory() . '/_/login/login.php';
 
-
-// add_theme_support( 'post-thumbnails' ); 
-// set_post_thumbnail_size( 800, 450, true );
-// add_image_size('small', 384, 9999);
-// add_image_size('card', 800, 450, true);
-
-
-function php_console_log( $message ) {
-
-  $message = htmlspecialchars( stripslashes( $message ) );
-  //Replacing Quotes, so that it does not mess up the script
-  $message = str_replace( '"', "-", $message );
-  $message = str_replace( "'", "-", $message );
-
-  return "<script>console.log('{$message}')</script>";
-}
-
-
-?>
+// blocks
+require get_template_directory() . '/_/blocks/gutenberg.php';
+require get_template_directory() . '/_/blocks/dumbo/register.php';
