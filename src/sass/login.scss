@@ -2,18 +2,39 @@
 @import "variables/variables";
 
 body {
-  background-color: $offBlack;
+  background-color: $black;
   font-family: $rR;
 
   #login {
     h1 {
       a {
         background-image: url('../../src/svg/blanket_logo.svg');  
+        background-size: 90%;
+        background-repeat: no-repeat;
+        height: 100px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-indent: -9999px;      
       }
     }//h1
 
     form {
-      color: $offBlack;
+      color: $white;
+      background-color: transparent;
+      box-shadow: none;
+
+      input {
+        background-color: transparent;
+        color: $white;
+
+        &.button {
+          background-color: $white;
+          border: none;
+          text-shadow: none;
+          color: $black;
+        }
+      }
     }//form
   }//login
 }//body

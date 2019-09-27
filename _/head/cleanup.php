@@ -1,7 +1,7 @@
 <?php 
 
 //clean up <head>
-function blanket_head_cleanup() {
+add_action('init', function() {
   // Originally from http://wpengineer.com/1438/wordpress-header/
   remove_action('wp_head', 'feed_links_extra', 3);
   add_action('wp_head', 'ob_start', 1, 0);
@@ -26,4 +26,4 @@ function blanket_head_cleanup() {
   remove_filter('comment_text_rss', 'wp_staticize_emoji');
   remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
   add_filter('use_default_gallery_style', '__return_false');
-}
+});

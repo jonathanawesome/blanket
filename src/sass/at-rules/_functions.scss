@@ -1,3 +1,9 @@
+//returns a REM value based on block count (1 block is equal to 4px)
 @function block($count) {
-  @return $count * 0.5rem;
+  @return $count * 0.25rem;
+}
+
+//returns a REM value based on pixel size
+@function px($px) {
+  @return (1/16) * $px + rem;
 }

@@ -1,0 +1,84 @@
+@mixin type_color() {
+  color: $rust;        
+}
+
+@mixin table() {
+  border: none;
+  border-spacing: 0;
+  font-size: px(14);
+
+  tr {
+    &:first-of-type {
+      td {
+        border: none;
+      }//td
+    }//first
+  }//tr
+
+  td, th {
+    border: none;
+    border-bottom: 1px solid orange;
+    word-break: normal;
+    padding: 5px 20px 5px 0;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+}//table()
+
+.wp-block-table {
+  @include table();
+}//wp-block-table
+
+
+
+h1, h2, h3, h4, h5, h6, .wp-block-heading h1, .wp-block-heading h2, .wp-block-heading h3, .wp-block-heading h4, .wp-block-heading h5, .wp-block-heading h6  {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+p, 
+// ul, 
+// ol, 
+h1, h2, h3, h4, h5, h6, table {
+  @include content_container();
+  @include type_color();
+}
+
+p, li {
+  font-size: px(14);
+}
+
+ul, ol {
+  margin: 0;
+  // padding: 0 px(50);
+  list-style-type: none;
+  
+  li {
+    margin-bottom: px(20);
+  }
+}
+
+strong {
+  font-family: $rB;
+}
+
+em {
+  font-family: $rRi;
+}
+
+button, .anchor_button {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.15);
+  border-radius: 3px;
+  padding: block(4) px(24);
+  line-height: 1;
+  text-decoration: none;
+
+  &.button__primary {
+    background: $rust;
+    color: $white;
+  }
+}

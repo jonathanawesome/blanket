@@ -1,19 +1,27 @@
-// import order is important
+// import order is important!
+
+// defaults, global, setup
 @import "reset/normalize";
 @import "fontface/fontface";
 @import "variables/variables";
 @import "reset/customreset";
-@import "at-rules/mixins";
 @import "at-rules/functions";
+@import "layout/breakpoints";
+@import "layout/containers";
+@import "layout/skeletons";
+@import "content/content";
+
+// components/partials
+@import "templates/partials/header/header";
+@import "templates/partials/footer/footer";
+
+
+// gutenberg blocks
+// @import "_/gutenberg/blocks/screenwidth/screenwidth"; // these block styles are unnecessary on the front end
+
 
 body {
-  background-color: $offBlack;
+  background-color: $white;
   font-family: $rR;
-  color: $rust;
-}
-
-.svg {
-  width: block(10);
-  height: block(10);
-  margin: block(2);
-}
+  color: $black;
+}//body

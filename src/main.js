@@ -11,5 +11,8 @@ import './scripts/polyfills';
 //vendors
 //import '../vendor/noframework.waypoints.js';
 
+// import block scripts to run on the frontend here
+// import '../_/gutenberg/blocks/featured/featured';
+
 //custom js
 import './scripts/app';

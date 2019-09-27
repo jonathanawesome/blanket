@@ -1,6 +1,12 @@
 <?php
 
-// 
+function blanket_get_template() {
+  if (is_front_page()) {    
+    echo "template_home";
+  } else {
+    echo "template_name";
+  }
+}//blanket_get_template
 
 function blanket_title() {
   if (is_archive()) {
@@ -30,7 +36,7 @@ function blanket_meta_image() {
     // the post has a thumbnail, 
     echo get_the_post_thumbnail_url( $id, 'medium' );
   } else {
-    echo getHashedAssetWithPath('test.png');
+    echo get_template_directory_uri() . '/screenshot.png';
   }
 }//blanket_meta_image
 

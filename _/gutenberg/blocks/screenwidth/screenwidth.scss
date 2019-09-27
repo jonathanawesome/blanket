@@ -1,0 +1,11 @@
+.block_screenwidth {
+  position: relative;
+  padding: px(4) px(12);
+  margin-bottom: px(40);
+  border-right: 2px solid $rust;
+  border-bottom: 2px dashed rgba($rust, .35);
+  border-left: 2px solid $rust;
+  color: $rust;
+  font-family: $rRi;
+  font-size: px(12);
+}//block_screenwidth

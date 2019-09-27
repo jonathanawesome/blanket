@@ -29,3 +29,6 @@ function blanket_search_ajax_handler() {
 
   die();
 }// blanket_search
+
+add_action('blanket_blanket_search', 'blanket_search_ajax_handler');
+add_action('blanket_nopriv_blanket_search', 'blanket_search_ajax_handler');

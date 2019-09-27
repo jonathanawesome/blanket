@@ -1,13 +1,8 @@
 /*
 Theme Name: blanket
-Author: Jonathan Brennan
-Description: blanket is modern a Wordpress starter theme.
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: blanketisyourfriend
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Author: jonathan brennan
+Description: a modern and opinionated Wordpress starter theme. blanket assumes you're familiar with the following: Advanced Wordpress, ACF, non-jQuery DOM manipulation, NPM, Webpack, SASS.
+Text Domain: hey_there_friend
 
 blanket has learned a lot from alcatraz https://github.com/carrieforde/Alcatraz, which is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.

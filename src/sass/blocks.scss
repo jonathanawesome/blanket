@@ -1,16 +1,94 @@
+// the styles in this file are applied to Gutenberg block editor in the WordPress dashboard
+// there's a lot of overriding and general cleanup in this file
+// if WordPress core editor styles or layout changes, these rules may need adjusting
+
 @import "fontface/fontface";
 @import "variables/variables";
 @import "reset/customreset";
+@import "at-rules/functions";
+@import "layout/breakpoints";
+@import "layout/containers";
+@import "layout/skeletons";
+@import "content/content";
 
-
-html {
-  font-size: 10px;
-}
-
-#post-title-0 {
-  font-size: 2rem;
-}
+// Gutenberg block styles
+@import "_/gutenberg/blocks/screenwidth/screenwidth";
 
 .editor-styles-wrapper {
-  // block styles!
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $rR !important;
 }
+
+.edit-post-visual-editor {
+  
+  .editor-post-title {
+    background: $rust;
+
+    .editor-post-title__block {
+      background-color: $rust;
+      margin-bottom: 20px;
+  
+      .editor-post-title__input {
+        color: $white;
+        font-family: $rB;
+        font-size: 30px;
+      
+        &:focus {
+          color: $white;
+        }
+  
+      }//editor-post-title__input     
+    }//editor-post-title__block     
+  }//editor-post-title
+
+  .block-editor-block-list__layout { 
+  
+    .block-editor-block-list__block {
+
+      p, ul, ol, .wp-block-heading h1, .wp-block-heading h2, .wp-block-heading h3, .wp-block-heading h4, .wp-block-heading h5, .wp-block-heading h6, .wp-block-table {
+        @include content_container();
+        @include type_color();
+      }
+
+      p {
+        font-size: px(14);
+      }
+
+      &:not([data-type*='core/']) {
+        // remove default block margin for all non-core blocks
+        .block-editor-block-list__block-edit {
+          margin-top: 0;
+          margin-bottom: 0;
+        }//block-editor-block-list__block-edit
+      }
+
+      .block-editor-block-drop-zone {
+        margin: 0;
+      }//block-editor-block-drop-zone    
+  
+    }//block-editor-block-list__block  
+  
+  }//.block-editor-block-list__layout  
+
+}//edit-post-visual-editor 
+
+  
+.wp-block {
+  max-width: none;
+  background-color: transparent;
+}
+
+
+@media (min-width: 600px) {
+
+  .block-editor-block-list__layout {
+    .block-editor-block-list__block {
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+  }
+
+}//min-width 600
+
+

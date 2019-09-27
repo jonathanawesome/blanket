@@ -25,9 +25,9 @@ function getHashedAssetWithPath( $filename ) {
   return $name_with_path;
 }
 
-//scripts & styles
-function blanket_add_scripts() {
-  
+
+// enqueue front end scripts
+add_action('wp_enqueue_scripts', function() {
   //remove gutenberg stylesheet
   wp_dequeue_style( 'wp-block-library' );
     
@@ -44,4 +44,4 @@ function blanket_add_scripts() {
       'ajaxURL' => get_template_directory_uri() . '/_/ajax/custom-ajax-handler.php',
     )
   );
-} //end blanket_add_scripts
+});

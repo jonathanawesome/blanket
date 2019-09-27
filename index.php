@@ -1,5 +1,21 @@
-<?php get_header() ?>
+<?php 
 
-  blanket index
+  get_template_part( 'templates/partials/head/_head' );
+  
+  if (is_single()) {
 
-<?php get_footer(); ?>
+    get_template_part( 'templates/single' );
+
+  } else {
+  
+    while ( have_posts() ) : the_post();
+      
+      the_content(); 
+  
+    endwhile; 
+    
+  }
+
+  get_template_part( 'templates/partials/foot/_foot' ); 
+  
+?>

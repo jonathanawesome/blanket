@@ -17,9 +17,8 @@ module.exports = {
     filename: '[name].[contenthash].js',
   },
   resolve: {
-    extensions: ['.js', '.scss', '.css', '.json'],
+    extensions: ['.js', '.scss', '.css'],
   },
-  mode: 'development',
   devtool: 'none',
   node: {
     fs: 'empty',
@@ -42,23 +41,13 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|svg)$/,
         use: [
           {
             loader: 'file-loader',
-            query: {
+            options: {
+              // limit: 8192, // in bytes
               name: 'img/[name].[contenthash].[ext]',
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            query: {
-              name: 'svg/[name].[contenthash].[ext]',
             },
           },
         ],
@@ -83,14 +72,14 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin({
-      // cleanStaleWebpackAssets: true,
-      // cleanAfterEveryBuildPatterns: ['!*.+(woff|woff2|eot|ttf|otf|TTF|OTF)'],
-    }),
+    new WebpackAssetsManifest(),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
-    new WebpackAssetsManifest(),
+    new CleanWebpackPlugin({
+      // cleanwebpackplugin likes to remove img files from dist on watch...this is a fix
+      cleanAfterEveryBuildPatterns: ['!**/*.png', '!**/*.jpg', '!**/*.gif', '!**/*.svg'],
+    }),
   ],
   optimization: {
     minimizer: [

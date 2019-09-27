@@ -1,17 +1,13 @@
 {
-  "name": "blanket",
-  "version": "3.0.0",
-  "description": "A modern Wordpress starter theme.",
+  "name": "solutionsource_developerhub",
+  "version": "0.0.1",
+  "description": "A bespoke, modern Wordpress theme for BCD Travel.",
+  "authors": "Jonathan Brennan @ projekt202",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
-    "dev": "webpack --watch"
+    "dev": "webpack --mode=development --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jonathanawesome/blanket.git"
-  },
-  "authors": "Jonathan Brennan",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
