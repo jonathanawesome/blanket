@@ -1,8 +1,8 @@
 {
-  "name": "solutionsource_developerhub",
+  "name": "blanket",
   "version": "0.0.1",
-  "description": "A bespoke, modern Wordpress theme for BCD Travel.",
-  "authors": "Jonathan Brennan @ projekt202",
+  "description": "A bespoke, modern Wordpress theme.",
+  "authors": "Jonathan Brennan",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
