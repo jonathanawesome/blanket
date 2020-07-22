@@ -18,7 +18,7 @@ function blanket_create_post_types() {
   //   'menu_name'          => 'POSTs'
   // );
 
-  // $encoded_svg = base64_encode( file_get_contents(BLANKET_SVG_DIR . 'bcd_logo.svg' ));
+  // $encoded_svg = base64_encode( file_get_contents(BLANKET_SVG_DIR . 'logo.svg' ));
 
   // $args = array(
   //   'labels'        => $labels,
